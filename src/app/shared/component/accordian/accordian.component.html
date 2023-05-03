@@ -1,0 +1,12 @@
+<div class="card mb-3">
+    <div class="card-header">
+        <h3 (click)="onHeadingClick()"><ng-content></ng-content><i class="fas float-right"
+            [ngClass]="{
+                'fa-chevron-down':!isCollapsed,
+                'fa-chevron-up':isCollapsed
+            }"></i></h3>
+    </div>
+    <div class="card-body" *ngIf="isCollapsed">
+        <ng-content select="p"></ng-content>
+    </div>
+</div>
